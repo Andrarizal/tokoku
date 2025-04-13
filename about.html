@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tentang Kami | Toko Tombak</title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+      load("header.html");
+      function load(url) {
+        var req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(1).innerHTML = req.responseText;
+      }
+    </script>
+
+    <!-- MAIN CONTENT -->
+    <main class="about-container">
+      <br /><br />
+
+      <h1>Tentang Kami</h1>
+      <p>
+        <span class="highlight">Toko Tombak</span> adalah toko tembakau
+        terpercaya yang berdiri sejak tahun 1998. Kami menyediakan berbagai
+        jenis tembakau berkualitas tinggi untuk memenuhi kebutuhan para pecinta
+        tembakau di seluruh Indonesia.
+      </p>
+
+      <p>
+        Kami percaya bahwa tembakau adalah bagian dari budaya dan kenikmatan
+        hidup. Oleh karena itu, kami selalu memastikan bahwa produk yang kami
+        sediakan adalah yang terbaik dari petani pilihan, dikemas secara
+        higienis, dan tersedia dengan harga yang kompetitif.
+      </p>
+
+      <p>
+        Toko Tombak juga melayani pemesanan secara online maupun offline, dan
+        siap membantu pelanggan dengan layanan ramah dan cepat. Kami terus
+        berinovasi untuk memberikan pengalaman berbelanja yang menyenangkan dan
+        terpercaya.
+      </p>
+
+      <p>
+        Terima kasih telah menjadi bagian dari perjalanan kami. Salam hangat
+        dari keluarga besar <span class="highlight">Toko Tombak</span>.
+      </p>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+      load("footer.html");
+      function load(url) {
+        var req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+      }
+    </script>
+    <style>
+      .about-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 15px;
+        font-size: 1rem;
+        line-height: 1.6;
+        box-sizing: border-box;
+      }
+
+      .about-container h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .about-container .highlight {
+        font-weight: bold;
+        color: #c49b63; /* warna emas/coklat khas tembakau */
+      }
+
+      @media (max-width: 600px) {
+        .about-container {
+          font-size: 0.95rem;
+          padding: 15px 10px;
+        }
+
+        .about-container h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </body>
+</html>

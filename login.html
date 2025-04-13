@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Toko Tombak</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/content.css" />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+      }
+
+      .login-container {
+        max-width: 400px;
+        margin: 60px auto;
+        background-color: #ffffff;
+        padding: 30px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      .btn-login {
+        width: 100%;
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .btn-login:hover {
+        background-color: #45a049;
+      }
+
+      .login-footer {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .login-footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      .login-footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="1"></div>
+    <script>
+      const headerLogin = new XMLHttpRequest();
+      headerLogin.open("GET", "header.html", false);
+      headerLogin.send(null);
+      document.getElementById(1).innerHTML = headerLogin.responseText;
+    </script>
+    
+    <br><br><br><br><br>
+
+    <!-- Login Form -->
+    <div class="login-container">
+      <h2>Login ke Toko Tombak</h2>
+      <form onsubmit="return handleLogin()">
+        <div class="form-group">
+          <label for="username">Nama Pengguna</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Masukkan nama pengguna"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Kata Sandi</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Masukkan kata sandi"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-login">Masuk</button>
+      </form>
+
+      <div class="login-footer">
+        Belum punya akun? <a href="register.html">Daftar sekarang</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="4"></div>
+    <script>
+      const footerLogin = new XMLHttpRequest();
+      footerLogin.open("GET", "footer.html", false);
+      footerLogin.send(null);
+      document.getElementById(4).innerHTML = footerLogin.responseText;
+    </script>
+
+    <!-- Script Login -->
+    <script>
+      function handleLogin() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Ganti validasi sesuai kebutuhan
+        if (username === "admin" && password === "admin123") {
+          // Simpan ke localStorage atau sessionStorage jika perlu
+          // localStorage.setItem("username", username);
+
+          // Redirect ke dashboard
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Nama pengguna atau kata sandi salah!");
+        }
+
+        return false; // Mencegah form dikirim secara default
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - Toko Tombak</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 15px;
+        font-size: 1rem;
+        line-height: 1.6;
+        box-sizing: border-box;
+      }
+
+      .contact-container h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .contact-info {
+        margin-top: 20px;
+      }
+
+      .contact-info p {
+        margin: 10px 0;
+      }
+
+      .contact-form {
+        margin-top: 30px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+      }
+
+      .contact-form button {
+        background-color: #8b4513;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .contact-form button:hover {
+        background-color: #a0522d;
+      }
+
+      @media (max-width: 600px) {
+        .contact-container h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="1"></div>
+    <script>
+      function loadHeader(url) {
+        const req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(1).innerHTML = req.responseText;
+      }
+      loadHeader("header.html");
+    </script>
+
+    <!-- Konten -->
+    <main class="contact-container">
+       <br><br>
+      <h1>Hubungi Kami</h1>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@tokotombak.com</p>
+        <p><strong>Telepon:</strong> 0812-3456-7890</p>
+        <p><strong>Alamat:</strong> Jl. Daun Sirih No. 99, Jakarta</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Kirim Pesan</h2>
+        <form>
+          <input type="text" placeholder="Nama Anda" required />
+          <input type="email" placeholder="Email Anda" required />
+          <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="4"></div>
+    <script>
+      function loadFooter(url) {
+        const req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+      }
+      loadFooter("footer.html");
+    </script>
+  </body>
+</html>

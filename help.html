@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bantuan - Toko Tombak</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/content.css" />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      main {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 10px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.1rem;
+        }
+
+        p,
+        ul {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="1"></div>
+    <script>
+      const headerRequest = new XMLHttpRequest();
+      headerRequest.open("GET", "header.html", false);
+      headerRequest.send(null);
+      document.getElementById(1).innerHTML = headerRequest.responseText;
+    </script>
+
+    <!-- Main Content -->
+    <main>
+       <br><br>
+      <h1>Pusat Bantuan</h1>
+
+      <h2>Cara Melakukan Pemesanan</h2>
+      <p>
+        Untuk melakukan pemesanan produk di Toko Tombak, silakan ikuti
+        langkah-langkah berikut:
+      </p>
+      <ul>
+        <li>
+          Pilih produk yang diinginkan dari halaman <strong>Produk</strong>
+        </li>
+        <li>Klik tombol <strong>Pesan</strong></li>
+        <li>Isi data pemesanan dengan benar</li>
+        <li>Lakukan pembayaran sesuai instruksi</li>
+      </ul>
+
+      <h2>Metode Pembayaran</h2>
+      <p>Kami menerima pembayaran melalui:</p>
+      <ul>
+        <li>Transfer Bank (BCA, Mandiri, BRI)</li>
+        <li>E-wallet (OVO, GoPay, Dana)</li>
+        <li>COD (Cash on Delivery) khusus area tertentu</li>
+      </ul>
+
+      <h2>Pengembalian dan Penukaran</h2>
+      <p>
+        Jika Anda menerima produk yang rusak atau tidak sesuai, silakan hubungi
+        kami maksimal 3x24 jam setelah produk diterima untuk proses pengembalian
+        atau penukaran.
+      </p>
+
+      <h2>Butuh Bantuan Lebih Lanjut?</h2>
+      <p>
+        Silakan hubungi kami melalui halaman
+        <a href="kontak.html">Kontak</a> untuk mendapatkan bantuan langsung dari
+        tim kami.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <div id="4"></div>
+    <script>
+      const footerRequest = new XMLHttpRequest();
+      footerRequest.open("GET", "footer.html", false);
+      footerRequest.send(null);
+      document.getElementById(4).innerHTML = footerRequest.responseText;
+    </script>
+  </body>
+</html>

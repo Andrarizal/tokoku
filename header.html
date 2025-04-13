@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Toko Tombak | Home </title>
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <!-- EXTERNAL LINKS -->
+    <link rel="stylesheet" href="css/header.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <section>
+            <!-- MAIN CONTAINER -->
+            <div id="container">
+                <!-- SHOP NAME -->
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                    Toko<span style="font-weight: normal">TOMBAK</span>
+                </a>
+                <!-- COLLCETIONS ON WEBSITE -->
+                <nav class="horizontal-menu">
+                    <a href="content.html">PRODUK</a>
+                    <a href="kontak.html">KONTAK</a>
+                    <a href="about.html">TENTANG KAMI</a>
+                    <a href="help.html">BANTUAN</a>
+                </nav>                      
+                <!-- SEARCH SECTION -->
+                <div id="search">
+                    <i class="fas fa-search search"></i>
+                    <input type="text" id="input" name="searchBox" placeholder="Cari Barang Yuk">
+                </div>
+                <!-- USER SECTION (CART AND USER ICON) -->
+                <div id="user">
+                    <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
+                    <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+      <style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: white;
+    gap: 20px;
+  }
+
+  #container {
+    display: flex;
+    align-items: center; /* pastikan semua item sejajar tengah */
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .horizontal-menu {
+    display: flex;
+    gap: 25px;
+    white-space: nowrap; /* mencegah menu terpotong */
+  }
+
+  .horizontal-menu a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .horizontal-menu a:last-child {
+    font-size: 14px;
+  }
+
+  .horizontal-menu a:hover {
+    color: #007bff;
+  }
+
+  #search {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+
+  #search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding-left: 8px;
+  }
+
+  #user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #badge {
+    font-size: 12px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 6px;
+    position: relative;
+    top: -10px;
+    right: 10px;
+  }
+
+  .addedToCart {
+    position: relative;
+  }
+</style>
+
+
+</body>
+</html>

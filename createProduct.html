@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tambah Produk - Toko Tombak</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/content.css" />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 60px auto;
+        background-color: #ffffff;
+        padding: 30px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .btn-submit {
+        width: 100%;
+        background-color: #2196f3;
+        border: none;
+        color: white;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .btn-submit:hover {
+        background-color: #1976d2;
+      }
+
+      .back-link {
+        margin-top: 15px;
+        text-align: center;
+        display: block;
+        font-size: 0.9rem;
+        color: #2196f3;
+        text-decoration: none;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+      const headerProduct = new XMLHttpRequest();
+      headerProduct.open("GET", "header.html", false);
+      headerProduct.send(null);
+      document.getElementById("header").innerHTML = headerProduct.responseText;
+    </script>
+<br><br><br>
+    <!-- Form Tambah Produk -->
+    <div class="container">
+      <h2>Tambah Produk Baru</h2>
+      <form onsubmit="return createProduct()">
+        <div class="form-group">
+          <label for="productName">Nama Produk</label>
+          <input
+            type="text"
+            id="productName"
+            placeholder="Contoh: Tombak Baja"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Harga (Rp)</label>
+          <input
+            type="number"
+            id="price"
+            placeholder="Contoh: 150000"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="stock">Stok</label>
+          <input type="number" id="stock" placeholder="Contoh: 25" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Deskripsi</label>
+          <textarea
+            id="description"
+            placeholder="Tulis deskripsi produk..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Simpan Produk</button>
+      </form>
+
+      <a href="dashboard.html" class="back-link">← Kembali ke Dashboard</a>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+      const footerProduct = new XMLHttpRequest();
+      footerProduct.open("GET", "footer.html", false);
+      footerProduct.send(null);
+      document.getElementById("footer").innerHTML = footerProduct.responseText;
+    </script>
+
+    <!-- Script Simpan Produk -->
+    <script>
+      function createProduct() {
+        const name = document.getElementById("productName").value.trim();
+        const price = document.getElementById("price").value.trim();
+        const stock = document.getElementById("stock").value.trim();
+        const description = document.getElementById("description").value.trim();
+
+        if (!name || !price || !stock || !description) {
+          alert("Semua field harus diisi!");
+          return false;
+        }
+
+        // Simulasi penyimpanan data (bisa dikembangkan untuk disimpan ke backend / localStorage)
+        const product = {
+          name,
+          price,
+          stock,
+          description,
+        };
+
+        console.log("Produk berhasil ditambahkan:", product);
+        alert("Produk berhasil ditambahkan!");
+        // Reset form
+        document.querySelector("form").reset();
+
+        // Bisa redirect jika mau
+        // window.location.href = "dashboard.html";
+        return false;
+      }
+    </script>
+  </body>
+</html>
