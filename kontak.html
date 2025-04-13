@@ -29,8 +29,19 @@
         margin: 10px 0;
       }
 
+      .map-wrapper {
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
       .contact-form {
         margin-top: 30px;
+      }
+
+      .contact-form h2 {
+        margin-bottom: 15px;
       }
 
       .contact-form input,
@@ -78,15 +89,32 @@
 
     <!-- Konten -->
     <main class="contact-container">
-       <br><br>
+      <br /><br />
       <h1>Hubungi Kami</h1>
 
       <div class="contact-info">
         <p><strong>Email:</strong> info@tokotombak.com</p>
-        <p><strong>Telepon:</strong> 0812-3456-7890</p>
-        <p><strong>Alamat:</strong> Jl. Daun Sirih No. 99, Jakarta</p>
+        <p><strong>Telepon:</strong> 0823-2285-5455</p>
+        <p>
+          <strong>Alamat:</strong> Jl. Raya Bulakwaru, RT.8 rw2, Bulakwaru, Kec.
+          Tarub, Kabupaten Tegal, Jawa Tengah 52184
+        </p>
       </div>
 
+      <!-- Google Maps Embed -->
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.713755899892!2d109.19675690000001!3d-6.924779999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fc7001a7685d5%3A0x7b8485415fc6bc0f!2sEs%20Kristal%20dan%20Es%20Teh%20Jumbo!5e0!3m2!1sid!2sid!4v1744507192960!5m2!1sid!2sid"
+          width="100%"
+          height="250"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <!-- Formulir Kontak -->
       <div class="contact-form">
         <h2>Kirim Pesan</h2>
         <form>
@@ -109,5 +137,14 @@
       }
       loadFooter("footer.html");
     </script>
+    <style>
+      .map-wrapper {
+        margin-top: 20px;
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </body>
 </html>
