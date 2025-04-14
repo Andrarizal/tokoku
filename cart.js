@@ -32,7 +32,7 @@ buttonTag.onclick = function () {
     document.cookie = "item=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "counter=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     // Redirect ke orderPlaced.html
-    window.location.href = '/orderPlaced.html';
+    window.location.href = '/tokoku/orderPlaced.html';
 };
 buttonDiv.appendChild(buttonTag);
 totalDiv.appendChild(buttonDiv);
